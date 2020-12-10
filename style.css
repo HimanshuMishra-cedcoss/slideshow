@@ -1,0 +1,55 @@
+#slider{
+	position: absolute;
+	width: 100%;
+	height: 500px;
+	overflow: hidden;
+}
+#slider .slides{
+	display: block;
+	width: 4200px;
+	height: 500px;
+	margin:0;
+	padding: 0;
+}
+#slider .slide{
+	float:left;
+	list-style-type: none;
+	width: 1400px;
+	height:500px;
+}
+.arrow i{
+   position:absolute;
+   z-index: 1;
+   top: 50%;
+   transform: translate(0,-50%);
+
+}
+.prev{
+	left:2%;
+	color:red;
+}
+.next{
+	right: 2%;
+	color:red;
+
+}
+.imgg{
+	height: 500px;
+	width: 100%;
+}
+.circle{
+   position:absolute;
+   z-index: 1;
+   top:90%;
+   left: 50%;
+   transform: translate(-50%,0);
+}
+.cir1{
+	color: red;
+}
+.div1{
+	height: 500px;
+	position:relative;
+}
+
+
