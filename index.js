@@ -7,7 +7,8 @@ $( document ).ready(function() {
     var $slideContainer=$slider.find('.slides');
     var $slides=$slideContainer.find('.slide');
     var interval;
-    var count=1
+    var count=1;
+    var c = 0;
     function startSlider(){
     	 interval=setInterval(function(){
     	 	$slideContainer.css('float','left');
@@ -66,6 +67,7 @@ function dot(){
     			if(count == 2){
     				$('.cir1').css('color','black');
     				$('.cir2').css('color','red');
+    				$('.cir3').css('color','black');
     			}
     			if(count == 3){
     				$('.cir1').css('color','black');
@@ -79,6 +81,45 @@ function dot(){
     				count = 1;
     			}
 }
+
+function fadot(){
+    			if(c == 1){
+    				$('.cir1').css('color','red');
+    				$('.cir2').css('color','black');
+    				$('.cir3').css('color','black');
+    			}
+    			if(c == 2){
+    				$('.cir1').css('color','black');
+    				$('.cir2').css('color','red');
+    				$('.cir3').css('color','black');
+    			}
+    			if(c == 3){
+    				$('.cir1').css('color','black');
+    				$('.cir2').css('color','black');
+    				$('.cir3').css('color','red');
+    				
+    			}
+}
 startSlider();
 $slider.on('mouseenter',stopSlider).on('mouseleave',startSlider);
+
+$('.cir1').click(function(){
+	stopSlider();
+	c = 1;
+	fadot();
+	$slideContainer.animate({'margin-left': '0px'},animationSpeed);
+})
+$('.cir2').click(function(){
+	stopSlider();
+	c = 2;
+	fadot();
+	$slideContainer.animate({'margin-left': '-1400px'},animationSpeed);
+})
+$('.cir3').click(function(){
+	stopSlider();
+	c = 3;
+	fadot();
+	$slideContainer.animate({'margin-left': '-2800px'},animationSpeed);
+})
+
 });
