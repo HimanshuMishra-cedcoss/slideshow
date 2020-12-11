@@ -25,7 +25,7 @@ $( document ).ready(function() {
     function stopSlider(){
 	clearInterval(interval);
 }
-$slider.on('mouseenter',stopSlider).on('mouseleave',startSlider);
+
 
 
 
@@ -80,7 +80,5 @@ function dot(){
     			}
 }
 startSlider();
-$(".cir2").click(function(){
-  
-});
+$slider.on('mouseenter',stopSlider).on('mouseleave',startSlider);
 });
