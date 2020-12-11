@@ -83,6 +83,7 @@ function dot(){
 }
 
 function fadot(){
+				$slideContainer.css('float','left');
     			if(c == 1){
     				$('.cir1').css('color','red');
     				$('.cir2').css('color','black');
